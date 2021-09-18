@@ -14,9 +14,9 @@ public class Solution {
 
     public static void checkWords(String word) {
         if (words.contains(word)) {
-            System.out.println("Слово " + word + " есть в множестве");
+            System.out.println(String.format("Слово %s есть в множестве", word));
         } else {
-            System.out.println("Слова " + word + " нет в множестве");
+            System.out.println(String.format("Слова %s нет в множестве", word));
         }
     }
 
