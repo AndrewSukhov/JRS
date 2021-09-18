@@ -11,7 +11,11 @@ import java.util.Iterator;
 public class Solution {
 
     public static void print(HashSet<String> words) {
-        //напишите тут ваш код
+        Iterator<String> it = words.iterator();
+        while (it.hasNext()) {
+            String str = it.next();
+            System.out.println(str);
+        }
     }
 
     public static void main(String[] args) {
