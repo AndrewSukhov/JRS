@@ -15,6 +15,10 @@ public class Solution {
     }
 
     public static void addStudents() {
-        //напишите тут ваш код
+        grades.put("AndrewA", 4.5);
+        grades.put("AndrewS", 4.4);
+        grades.put("AndrewD", 4.3d);
+        grades.put("AndrewF", 4.2d);
+        grades.put("AndrewG", 4.1d);
     }
 }
