@@ -25,10 +25,16 @@ public class Solution {
     }
 
     public static void printStudents() {
-        //напишите тут ваш код
+        for (String student : grades.keySet()){
+            System.out.println(student);
+        }
     }
 
     public static Double getAverageMark() {
-        //напишите тут ваш код
+        Double average = 0d;
+        for ( Double value : grades.values()) {
+            average += value;
+        }
+        return average / grades.size();
     }
 }
