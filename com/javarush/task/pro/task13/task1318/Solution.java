@@ -12,6 +12,14 @@ public class Solution {
     }
 
     public static Month getNextMonth(Month month) {
-        //напишите тут ваш код
+        if (month == Month.DECEMBER) {
+            return  Month.JANUARY;
+        }
+        return  Month.values()[month.ordinal() + 1];
     }
+/*
+    лаконичное решение:
+          int ordinal = month == Month.DECEMBER ? 0 : month.ordinal() + 1;
+          return Month.values()[ordinal];
+*/
 }
