@@ -9,34 +9,42 @@ public class Solution {
     }
 
     public static String getMonthByIndex(int monthIndex) {
-        String monthString;
-        if (monthIndex == 1) {
-            monthString = "Январь";
-        } else if (monthIndex == 2) {
-            monthString = "Февраль";
-        } else if (monthIndex == 3) {
-            monthString = "Март";
-        } else if (monthIndex == 4) {
-            monthString = "Апрель";
-        } else if (monthIndex == 5) {
-            monthString = "Май";
-        } else if (monthIndex == 6) {
-            monthString = "Июнь";
-        } else if (monthIndex == 7) {
-            monthString = "Июль";
-        } else if (monthIndex == 8) {
-            monthString = "Август";
-        } else if (monthIndex == 9) {
-            monthString = "Сентябрь";
-        } else if (monthIndex == 10) {
-            monthString = "Октябрь";
-        } else if (monthIndex == 11) {
-            monthString = "Ноябрь";
-        } else if (monthIndex == 12) {
-            monthString = "Декабрь";
-        } else {
-            monthString = "Недействительный месяц";
-        }
+        String monthString = switch (monthIndex) {
+            case 1 -> "Январь";
+            case 2 -> "Февраль";
+            case 3 -> "Март";
+            case 4 -> "Апрель";
+            case 5 -> "Май";
+            case 6 -> "Июнь";
+            case 7 -> "Июль";
+            case 8 -> "Август";
+            case 9 -> "Сентябрь";
+            case 10 -> "Октябрь";
+            case 11 -> "Ноябрь";
+            case 12 -> "Декабрь";
+            default -> "Недействительный месяц";
+        };
         return monthString;
     }
+/*
+    Вариант решения 2:
+    String monthString;
+        switch (monthIndex) {
+        case 1: monthString = "Январь"; break;
+        case 2: monthString = "Февраль"; break;
+        case 3: monthString = "Март"; break;
+        case 4: monthString = "Апрель"; break;
+        case 5: monthString = "Май"; break;
+        case 6: monthString = "Июнь"; break;
+        case 7: monthString = "Июль"; break;
+        case 8: monthString = "Август"; break;
+        case 9: monthString = "Сентябрь"; break;
+        case 10: monthString = "Октябрь"; break;
+        case 11: monthString = "Ноябрь"; break;
+        case 12: monthString = "Декабрь"; break;
+        default: monthString = "Недействительный месяц";
+    }
+        return monthString;
+}
+*/
 }
