@@ -44,16 +44,71 @@ public class Solution {
         System.out.printf(INPUT_AGE, name);
         int age = Integer.parseInt(scanner.nextLine());
 
-        //напишите тут ваш код
-        user.setName(name);
 
-        user.setAge(age);
+        switch (user.setName(name)) {
+            case 0 -> {
+            }
+            case -1 -> System.out.println(CANNOT_BE_NULL);
+            case -2 -> System.out.println(CANNOT_BE_EMPTY);
+            case -3 -> System.out.println(CANNOT_CONTAIN_DIGIT);
+            default -> System.out.println(UNKNOWN_ERROR);
+        }
+
+        switch (user.setAge(age)) {
+            case 0 -> {
+            }//{break;}
+            case -1 -> System.out.println(CANNOT_BE_NEGATIVE);
+            case -2 -> System.out.println(CANNOT_BE_TOO_BIG);
+            default -> System.out.println(UNKNOWN_ERROR);
+        }
 
         users.add(user);
     }
 
     static void findUserIndex(User user) {
-        //напишите тут ваш код
-        System.out.printf(FOUND, user.getName(), users.indexOf(user));
+        switch (users.indexOf(user)) {
+            case -1 -> System.out.printf(NOT_FOUND, user.getName());
+            default -> System.out.printf(FOUND, user.getName(), users.indexOf(user));
+        }
     }
 }
+/* второй вариант решения.
+    static void addUser(User user) {
+        System.out.print(INPUT_NAME);
+        String name = scanner.nextLine();
+
+        System.out.printf(INPUT_AGE, name);
+        int age = Integer.parseInt(scanner.nextLine());
+
+        int status = user.setName(name);
+        if (status == -1) {
+            System.out.println(CANNOT_BE_NULL);
+        } else if (status == -2) {
+            System.out.println(CANNOT_BE_EMPTY);
+        } else if (status == -3) {
+            System.out.println(CANNOT_CONTAIN_DIGIT);
+        } else if (status != 0) {
+            System.out.println(UNKNOWN_ERROR);
+        }
+
+        status = user.setAge(age);
+        if (status == -1) {
+            System.out.println(CANNOT_BE_NEGATIVE);
+        } else if (status == -2) {
+            System.out.println(CANNOT_BE_TOO_BIG);
+        } else if (status != 0) {
+            System.out.println(UNKNOWN_ERROR);
+        }
+
+        users.add(user);
+    }
+
+    static void findUserIndex(User user) {
+        int code = users.indexOf(user);
+        if (code == -1) {
+            System.out.printf(NOT_FOUND, user.getName());
+        } else {
+            System.out.printf(FOUND, user.getName(), users.indexOf(user));
+        }
+    }
+*/
