@@ -39,7 +39,12 @@ public class Solution {
             }
 
             int studentId;
-            studentId = Integer.parseInt(input);
+            try {
+                studentId = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println(INTEGER_REQUIRED);
+                continue;
+            }
 
             try {
                 System.out.println(ANSWERING + studentsJournal.get(studentId));
