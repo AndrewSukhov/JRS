@@ -38,7 +38,11 @@ public class Solution {
             }
 
             int studentId = Integer.parseInt(input);
-            System.out.println(ANSWERING + studentsJournal.get(studentId));
+            try {
+                System.out.println(ANSWERING + studentsJournal.get(studentId));
+            } catch (ArrayIndexOutOfBoundsException error) {
+                System.out.println(NOT_EXIST);
+            }
         }
     }
 }
