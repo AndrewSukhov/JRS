@@ -6,8 +6,8 @@ package com.javarush.task.pro.task14.task1409;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        generateLuckyNumber();
+    public static void main(String[] args) throws Exception {
+            generateLuckyNumber();
     }
 
     static void generateLuckyNumber() throws Exception {
