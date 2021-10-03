@@ -7,7 +7,11 @@ package com.javarush.task.pro.task14.task1416;
 public class Solution {
 
     public static void main(String[] args) {
-        dangerousMethod();
+        try {
+            dangerousMethod();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     static void dangerousMethod() throws Exception {
