@@ -13,7 +13,14 @@ public class Solution {
     }
 
     public static void printStackTrace(StackTraceElement[] stackTrace) {
-        //напишите тут ваш код
+        for (StackTraceElement info : stackTrace) {
+            System.out.printf(OUTPUT_FORMAT,
+                    info.getMethodName(),
+                    info.getLineNumber(),
+                    info.getClassName(),
+                    info.getFileName()
+            );
+        }
     }
 
     static void makeScrewdriver() {
