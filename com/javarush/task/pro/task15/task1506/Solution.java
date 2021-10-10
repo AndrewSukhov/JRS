@@ -5,13 +5,25 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
-/* 
+/*
 Фейсконтроль
 */
 
 public class Solution {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        try (Scanner scanner = new Scanner(System.in)) {
+            List<String> lines = Files.readAllLines(Paths.get(scanner.nextLine()));
+            for (String str : lines) {
+                char[] chars = str.toCharArray();
+                for (char character : chars) {
+                    if (character != ' ' && character != '.' && character != ',') {
+                        System.out.print(character);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Something went wrong : " + e);
+        }
     }
 }
 
