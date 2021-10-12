@@ -15,9 +15,8 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         try (InputStream stream = System.in;
-             InputStreamReader reader = new InputStreamReader(stream);
-             BufferedReader buff = new BufferedReader(reader)) {
-            String line = buff.readLine();
+             Scanner scanner = new Scanner(stream)) {
+            String line = scanner.nextLine();
             char[] chars = line.toCharArray();
             Set<Character> characters = new HashSet<>();
             for (char aChar : chars) {
