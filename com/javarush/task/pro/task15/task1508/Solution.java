@@ -13,8 +13,9 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         try (InputStream stream = System.in;
-             Scanner console = new Scanner(stream)) {
-            String line = console.nextLine();
+             InputStreamReader reader = new InputStreamReader(stream);
+             BufferedReader buffer = new BufferedReader(reader)) {
+            String line = buffer.readLine();
             char[] chars = line.toCharArray();
             for (int i = 0; i < chars.length; i++) {
                 if (i % 2 == 1) {
