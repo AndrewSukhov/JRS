@@ -18,6 +18,13 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Path directory = Path.of(scanner.nextLine());
-        //напишите тут ваш код
+        try(DirectoryStream<Path> files = Files.newDirectoryStream(directory)) {
+            for (Path path : files) {
+                if (Files.isRegularFile(path)){
+                    System.out.println(path + THIS_IS_FILE);
+                } else if (Files.isDirectory(path))
+                    System.out.println(path.toString() + THIS_IS_DIR);
+            }
+        }
     }
 }
