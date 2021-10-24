@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
 
-/* 
+/*
 Временное сохранение файла
 */
 
@@ -15,6 +15,13 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
-        //напишите тут ваш код
+        URL url = new URL(line);
+        InputStream input = url.openStream();
+
+        Path tempFile = Files.createTempFile(null, null);
+        Files.write(tempFile, input.readAllBytes());
+//        byte[] buffer = input.readAllBytes();
+//        String str = new String(buffer);
+//        System.out.println(str);
     }
 }
