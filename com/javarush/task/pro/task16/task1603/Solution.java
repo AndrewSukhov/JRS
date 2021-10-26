@@ -11,7 +11,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Date date = new Date("6 January 2010");
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-ММ-dd");
         System.out.println(formatter.format(date));
     }
 }
