@@ -15,7 +15,7 @@ public class Solution {
 
         System.out.print("Старт");
         while (start.before(end)) {
-            start.roll(Calendar.DATE, 1);
+            start.add(Calendar.DATE, 1);
             System.out.print(".");
         }
         System.out.print("Финиш");
