@@ -16,12 +16,18 @@ public class Solution {
 
     public static void main(String[] args) {
         Calendar currentDay = Calendar.getInstance();
-        //напишите тут ваш код
+        while (!isTeleportInvented(currentDay)) {
+            currentDay.add(Calendar.YEAR, 10);
+        }
     }
 
     static boolean isTeleportInvented(Calendar currentDay) {
-        //напишите тут ваш код
-
-        return false;
+        if (currentDay.after(INVENTION_DAY)) {
+            System.out.println(INVENTED);
+            return true;
+        } else {
+            System.out.println(NOT_INVENTED);
+            return false;
+        }
     }
 }
