@@ -17,8 +17,6 @@ public class Solution {
     }
 
     static String getDayOfWeek(LocalDate date) {
-        //напишите тут ваш код
-
-        return null;
+        return date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.forLanguageTag("ru"));
     }
 }
