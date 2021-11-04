@@ -2,7 +2,7 @@ package com.javarush.task.pro.task16.task1611;
 
 import java.time.LocalTime;
 
-/* 
+/*
 Нужно просто посчитать
 */
 
@@ -19,6 +19,6 @@ public class Solution {
     }
 
     static LocalTime amazingMethod(LocalTime base) {
-        return base.plusHours(3);
+        return base.plusMinutes(288);
     }
 }
