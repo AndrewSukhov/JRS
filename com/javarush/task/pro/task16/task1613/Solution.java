@@ -30,11 +30,20 @@ public class Solution {
         for (LocalDateTime dateTime : dateTimeList) {
             System.out.println(dateTime + ", is weekend - " + isWeekend(dateTime));
         }
-
     }
 
     public static boolean isWeekend(LocalDateTime dateTime) {
-        //напишите тут ваш код
+        int dayValue = dateTime.getDayOfWeek().getValue();
+
+        if (SATURDAY == dayValue) {
+            return true;
+        }
+        if (FRIDAY == dayValue && dateTime.getHour() >= WEEKEND_START_FRIDAY_CUT_OFF_HOUR) {
+            return true;
+        }
+        if (SUNDAY == dayValue && dateTime.getHour() < WEEKEND_END_SUNDAY_CUT_OFF_HOUR) {
+            return true;
+        }
 
         return false;
     }
