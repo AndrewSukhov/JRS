@@ -20,14 +20,11 @@ public class Solution {
     }
 
     static TreeSet<String> getSortedZones() {
-        //напишите тут ваш код
-
-        return null;
+        return new TreeSet<>(ZoneId.getAvailableZoneIds());
     }
 
     static ZonedDateTime getBeijingDateTime() {
-        //напишите тут ваш код
-
-        return null;
+        ZoneId zone = ZoneId.of("Asia/Shanghai");
+        return ZonedDateTime.now(zone);
     }
 }
