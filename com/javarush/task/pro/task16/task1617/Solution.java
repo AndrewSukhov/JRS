@@ -15,8 +15,7 @@ public class Solution {
     static ZonedDateTime globalTime;
 
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        globalTime = localDateTime.atZone(zoneId);
         System.out.println(globalTime);
     }
 }
