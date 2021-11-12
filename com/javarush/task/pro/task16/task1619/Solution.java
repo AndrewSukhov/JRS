@@ -12,6 +12,8 @@ public class Solution {
     static LocalDateTime localDateTime = LocalDateTime.now();
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyyг. Hч.mмин");
+        String text = dtf.format(localDateTime);
+        System.out.println(text);
     }
 }
