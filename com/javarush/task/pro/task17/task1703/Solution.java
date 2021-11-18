@@ -15,7 +15,10 @@ public class Solution {
     }
 
     public static void createCrew(){
-        //напишите тут ваш код
+        astronauts.add(new Human());
+        astronauts.add(new Human());
+        astronauts.add(new Dog());
+        astronauts.add(new Cat());
     }
 
     public static void printCrewInfo() {
