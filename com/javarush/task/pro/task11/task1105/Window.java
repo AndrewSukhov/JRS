@@ -9,8 +9,8 @@ public class Window {
     private int width = 3;
 
     public void changeSize(int height, int width){
-        height = height;
-        width = width;
+        this.height = height;
+        this.width = width;
     }
 
     public void printSize(){
