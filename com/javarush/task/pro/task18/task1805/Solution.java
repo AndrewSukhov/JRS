@@ -22,6 +22,6 @@ public class Solution {
     }
 
     public static void sortStringsByLength(ArrayList<String> strings) {
-        Collections.sort(strings, (s1, s2) -> s1.length() - s2.length());
+        Collections.sort(strings, new StringComparator());
     }
 }
