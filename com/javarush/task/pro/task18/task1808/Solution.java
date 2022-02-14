@@ -16,6 +16,6 @@ public class Solution {
     }
 
     public static void print(ArrayList<String> strings) {
-        strings.forEach(string -> System.out.println(string));
+        strings.forEach(System.out::println);
     }
 }
