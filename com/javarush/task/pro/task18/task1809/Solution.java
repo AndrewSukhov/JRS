@@ -3,7 +3,7 @@ package com.javarush.task.pro.task18.task1809;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/* 
+/*
 Прощание со ссылками на методы
 */
 
@@ -16,6 +16,6 @@ public class Solution {
     }
 
     public static void print(ArrayList<Integer> numbers) {
-        numbers.forEach(System.out::println);
+        numbers.forEach(number -> System.out.println(number));
     }
 }
