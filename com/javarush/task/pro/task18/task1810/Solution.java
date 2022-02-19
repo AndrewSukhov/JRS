@@ -29,12 +29,10 @@ public class Solution {
     }
 
     public static String[] toStringArray(ArrayList<String> strings) {
-        //напишите тут ваш код
-        return new String[]{};
+        return strings.toArray(String[]::new);
     }
 
     public static Integer[] toIntegerArray(ArrayList<Integer> integers) {
-        //напишите тут ваш код
-        return new Integer[]{};
+        return integers.toArray(Integer[]::new);
     }
 }
